@@ -6,6 +6,8 @@ import { router } from "./router";
 import Demo from './components/Demo.vue';
 import './lib/svg.js'
 import 'github-markdown-css'
+// prism-风格: coy,dark,funky,okaidia,solarizedlight,tomorrow,twilight
+import 'prismjs/themes/prism-coy.css' 
 
 const app = createApp(App);
 app.use(router);

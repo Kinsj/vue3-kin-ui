@@ -5,24 +5,43 @@
       <component :is="src" />
     </div>
     <div class="demo-actions">
-      <Button>查看代码</Button>
+      <Button v-if="codeVisible" @click="codeVisible=false">隐藏代码</Button>
+      <Button v-else @click="codeVisible=true">查看代码</Button>
     </div>
-    <div class="demo-code">
-      <pre>{{src.__sourceCode}}</pre>
+    <div class="demo-code" v-if="codeVisible">
+      <pre
+        v-if="src" 
+        v-html="sourceCode"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Button from '../lib/Button.vue'
+import 'prismjs'
 import {
+  computed,
   ref
 } from 'vue'
+
+const Prism = (window as any).Prism
+
 export default {
   props: {
     src: {
       type: Object,
       require: true
+    }
+  },
+  setup(props) {
+    const codeVisible = ref(false)
+    const sourceCode = computed(() => {
+      return Prism.highlight(props.src.__sourceCode, Prism.languages.html, 'html')
+    })
+    return {
+      sourceCode,
+      codeVisible
     }
   },
   components: {
