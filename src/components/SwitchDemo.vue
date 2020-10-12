@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Switch 组件</h1>
-    <component :is="SwitchDemo1" />
-    <component :is="SwitchDemo2" />
+    <Demo :src="SwitchDemo1"/>
+    <Demo :src="SwitchDemo2"/>
   </div>
 </template>
 <script lang="ts">
