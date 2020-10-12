@@ -1,11 +1,10 @@
 <template>
   <div class="layout">
     <Topnav
-      toggleMenuButtonVisible
       class="nav"
     />
     <div class="content">
-      <aside v-if="menuVisible">
+      <aside :class="{active: menuVisible}">
         <h2>文档</h2>
         <ol>
           <li>
@@ -101,6 +100,15 @@ aside {
   padding-top: 70px;
   height: 100%;
   z-index: 1;
+
+  @media (max-width: 500px) {
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+    &.active {
+      transform: translateX(0);
+    }
+  }
 
   > h2 {
     margin-top: 1em;
