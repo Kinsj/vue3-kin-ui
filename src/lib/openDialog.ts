@@ -1,6 +1,6 @@
 import Dialog from "./Dialog.vue";
 import { createApp, h } from "vue";
-export const openDialog = (options) => {
+const openDialog = (options) => {
   const { title, content, onOk, onCancel } = options;
   const div = document.createElement("div");
   document.body.appendChild(div);
@@ -30,3 +30,5 @@ export const openDialog = (options) => {
   });
   app.mount(div);
 };
+
+export default openDialog;

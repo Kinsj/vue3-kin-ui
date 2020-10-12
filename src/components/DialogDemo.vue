@@ -26,9 +26,7 @@ import {
   ref,
   h
 } from 'vue'
-import {
-  openDialog
-} from '../lib/openDialog'
+import openDialog from '../lib/openDialog'
 export default {
   components: {
     Dialog,
