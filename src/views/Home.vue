@@ -86,6 +86,12 @@ $color: #007974;
     margin-left: 5vw;
     margin-top: 10px;
   }
+  @media (max-width: 800px) {
+    background: url('/img/bg.jpg') top / contain no-repeat ;
+    .logo {
+      height: 50px;
+    }
+  }
 }
 
 .features {
