@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts">
-import Tab from './Tab.vue'
 import {
   computed,
   ref,
@@ -52,7 +51,8 @@ export default {
     const titles = tabPanes.map(item => item.props.title)
 
     tabPanes.forEach(tab => {
-      if (tab.type !== Tab) {
+      // @ts-ignore
+      if (tab.name !== 'kin-ui-tab') {
         throw new Error('Tabs 子标签必须是 Tab')
       }
     })
