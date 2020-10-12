@@ -3,4 +3,4 @@ node_modules
 dist
 *.local
 /.history
-yarn.lock
+*.lock

@@ -27,56 +27,58 @@ export default {
   props: {
     visible: {
       type: Boolean,
-      default: false
+      default: false,
     },
     closeOnClickOverlay: {
       type: Boolean,
-      default: true
+      default: true,
     },
     onOk: {
-      type: Function
+      type: Function,
     },
     onCancel: {
-      type: Function
-    }
+      type: Function,
+    },
   },
   components: {
     Button,
   },
   setup(props, context) {
     const close = () => {
-      context.emit('update:visible', false)
-    }
+      context.emit("update:visible", false);
+    };
     const onClickOverlay = () => {
       if (props.closeOnClickOverlay) {
-        close()
+        close();
       }
-    }
+    };
     const handleOk = () => {
       if (props.onOk?.length) {
         // 传入的函数如果接受参数，则调用ok并给到close
-        props.onOk?.(close)
+        props.onOk?.(close);
       } else {
         // 传入的函数不接受参数，则在调用ok后直接调用close
         props.onOk?.();
         close();
       }
-    }
+    };
     const handleCancel = () => {
       if (props.onCancel?.length) {
-        props.onCancel?.(close)
+        // 传入的函数如果接受参数，则调用ok并给到close
+        props.onCancel?.(close);
       } else {
+        // 传入的函数不接受参数，则在调用ok后直接调用close
         props.onCancel?.();
         close();
       }
-    }
+    };
     return {
       close,
       onClickOverlay,
       handleOk,
-      handleCancel
-    }
-  }
+      handleCancel,
+    };
+  },
 };
 </script>
 
@@ -137,7 +139,7 @@ $border-color: #d9d9d9;
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background: black;
@@ -153,7 +155,6 @@ $border-color: #d9d9d9;
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
-
   }
 }
 </style>

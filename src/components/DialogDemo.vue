@@ -1,18 +1,20 @@
 <template>
 <div>Dialog 示例</div>
 <h1>示例1</h1>
-<div style="position: relative; z-index: 1;">
-  <Button @click="toggle">toggle</Button>
-  <Dialog v-model:visible="x" :closeOnClickOverlay="false" :onOk="close => close()">
-    <template v-slot:content>
-      <strong>hi</strong>
-      <div>hi2</div>
-    </template>
-    <template v-slot:title>
-      <strong>加粗的标题</strong>
-    </template>
-  </Dialog>
-</div>
+<Button @click="toggle">toggle</Button>
+<Dialog 
+  v-model:visible="x" 
+  :closeOnClickOverlay="false" 
+  :onOk="close => close()"
+>
+  <template v-slot:content>
+    <strong>hi</strong>
+    <div>hi2</div>
+  </template>
+  <template v-slot:title>
+    <strong>加粗的标题</strong>
+  </template>
+</Dialog>
 <h1>示例2</h1>
 <Button @click="showDialog">show</Button>
 </template>
@@ -21,9 +23,12 @@
 import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/Button.vue'
 import {
-  ref
+  ref,
+  h
 } from 'vue'
-import openDialog from '../lib/openDialog'
+import {
+  openDialog
+} from '../lib/openDialog'
 export default {
   components: {
     Dialog,
@@ -34,7 +39,6 @@ export default {
     const toggle = () => {
       x.value = !x.value
     }
-
     const showDialog = () => {
       openDialog({
         title: 'dialog',
@@ -45,7 +49,6 @@ export default {
         }
       });
     }
-
     return {
       x,
       toggle,
