@@ -11,7 +11,6 @@ import SwitchDemo2 from "../demo/switch/demo2.vue";
 import { ref } from "vue";
 export default {
   setup() {
-    const bool = ref(false);
     return { SwitchDemo1, SwitchDemo2 };
   },
 };
