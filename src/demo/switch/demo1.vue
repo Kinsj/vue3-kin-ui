@@ -1,3 +1,5 @@
+<demo>常规使用</demo>
+
 <template>
 <Switch v-model:value="bool" />
 </template>
