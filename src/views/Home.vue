@@ -1,61 +1,91 @@
 <template>
-<div>
-  <div class="topnavAndBanner">
-    <Topnav />
-    <div class="banner">
-      <h1>轱辘UI</h1>
-      <h2>一个厉害的 UI 框架</h2>
-      <p class="actions">
-        <a href="https://github.com">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
-    </div>
+<div class="bg">
+  <div class="text">
+    <h1>Kin UI</h1>
+    <h2>一套基于 Vue 3.0 + TypeScript 开发的</h2>
+    <h2>UI 组件库</h2>
+    <p class="actions">
+      <Button level="main"><router-link to="/doc">开始使用</router-link></Button>
+      <Button><a href="https://github.com"><svg class="icon">
+        <use xlink:href="#i-github"></use>
+      </svg> GitHub</a></Button>
+    </p>
   </div>
-  <div class="features">
-    <ul>
-      <li>
-        <svg>
-          <use xlink:href="#icon-vue"></use>
-        </svg>
-        <h3>基于 Vue 3</h3>
-        <p>骄傲地使用了 Vue 3 Composition API</p>
-      </li>
-      <li>
-        <svg>
-          <use xlink:href="#icon-ts"></use>
-        </svg>
-        <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
-      </li>
-      <li>
-        <svg>
-          <use xlink:href="#icon-light"></use>
-        </svg>
-        <h3>代码易读</h3>
-        <p>每个组件的源代码都极其简洁</p>
-      </li>
-    </ul>
-  </div>
+  <img class="logo" src="img/logo.png" alt="">
+  <img class="footer" src="img/footer.png" alt="">
 </div>
 </template>
 
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
+import Button from "../lib/Button.vue";
 export default {
   components: {
-    Topnav
+    Button
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+$blue: #078ef6;
 $border-radius: 4px;
 $color: #007974;
 
 .topnavAndBanner {
   background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
+}
+
+.bg {
+  background: url('/img/bg.jpg') 50% / cover no-repeat ;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 6vw;
+    > h1 {
+      font-size: 50px;
+      &:after {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        content: '';
+        display: block;
+        width: 1.2em;
+        height: 3.5px;
+        background: $blue;
+      }
+    }
+    > h2 {
+      font-size: 24px;
+      margin-top: 10px;
+      color: #515a6e;
+    }
+    .actions {
+      margin-top: 80px;
+      button {
+        margin-right: 10px;
+        border-radius: 20px;
+        &.gulu-level-normal {
+          color: $blue;
+          border-color: $blue;
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+  }
+  .logo {
+    height: 60px;
+    margin-left: 5vw;
+    margin-top: 10px;
+  }
 }
 
 .features {
@@ -99,32 +129,6 @@ $color: #007974;
 
       >p {
         grid-area: text
-      }
-    }
-  }
-}
-
-.banner {
-  color: $color;
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  >.actions {
-    padding: 8px 0;
-
-    a {
-      margin: 0 8px;
-      background: $green;
-      color: white;
-      display: inline-block;
-      padding: 8px 24px;
-      border-radius: $border-radius;
-
-      &:hover {
-        text-decoration: none;
       }
     }
   }
