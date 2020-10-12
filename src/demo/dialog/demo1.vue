@@ -1,3 +1,4 @@
+<demo>常规使用</demo>
 <template>
 <div style="position: relative; z-index: 1;">
   <Button @click="toggle">toggle</Button>

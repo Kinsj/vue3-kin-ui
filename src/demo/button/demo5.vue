@@ -1,3 +1,4 @@
+<demo>支持 loading</demo>
 <template>
 <div>
   <Button loading>加载中</Button>

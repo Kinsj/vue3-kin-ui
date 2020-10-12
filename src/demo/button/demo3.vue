@@ -1,3 +1,4 @@
+<demo>支持 level</demo>
 <template>
 <div>
   <div>

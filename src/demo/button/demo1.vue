@@ -1,3 +1,4 @@
+<demo>常规使用</demo>
 <template>
 <div>
   <Button>Normal</Button>

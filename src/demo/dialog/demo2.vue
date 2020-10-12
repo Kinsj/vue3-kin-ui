@@ -1,3 +1,4 @@
+<demo>openDialog 快捷使用</demo>
 <template>
   <div>
     <Button @click="showDialog">打开对话框</Button>
