@@ -1,5 +1,5 @@
 <template>
-<article class="markdown-body" v-html="md">
+<article class="markdown-body" v-html="content">
 </article>
 </template>
 
@@ -9,20 +9,10 @@ import {
 } from 'vue';
 export default {
   props: {
-    path: {
+    content: {
       type: String,
       required: true
     }
   },
-  setup(props) {
-    const md = ref('');
-    import(props.path).then(res => {
-      md.value = res.default
-    })
-
-    return {
-      md
-    }
-  }
 }
 </script>

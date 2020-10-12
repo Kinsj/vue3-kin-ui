@@ -8,11 +8,14 @@ import DialogDemo from "./components/DialogDemo.vue";
 import TabsDemo from "./components/TabsDemo.vue";
 import DocDemo from "./components/DocDemo.vue";
 import MarkDown from "./components/MarkDown.vue";
+import Intro from "./markdown/intro.md"
+import GetStarted from "./markdown/get-started.md"
+import Install from "./markdown/install.md"
 
-const md = path => h(
+const md = content => h(
   MarkDown,
   {
-    path, key: path
+    content, key: content
   }
 )
 
@@ -26,9 +29,9 @@ export const router = createRouter({
       component: Doc,
       children: [
         { path: "", component: DocDemo },
-        { path: "intro", component: md('/src/markdown/intro.md') },
-        { path: "get-started", component: md('/src/markdown/get-started.md') },
-        { path: "install", component: md('/src/markdown/install.md') },
+        { path: "intro", component: md(Intro) },
+        { path: "get-started", component: md(GetStarted) },
+        { path: "install", component: md(Install) },
         { path: "switch", component: SwitchDemo },
         { path: "button", component: ButtonDemo },
         { path: "dialog", component: DialogDemo },
