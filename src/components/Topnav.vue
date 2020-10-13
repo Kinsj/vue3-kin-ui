@@ -6,6 +6,11 @@
         <use :xlink:href="`#i-${menuVisible ? 'close' : 'menu'}`"></use>
       </svg>
     </span>
+    <a class="github" href="https://github.com/Kinsj/vue3-kin-ui">
+      <svg class="icon">
+        <use xlink:href="#i-github"></use>
+      </svg>
+    </a>
   </div>
 </template>
 <script lang="ts">
@@ -37,6 +42,11 @@ export default {
     img {
       height: 30px;
     }
+  }
+  .github {
+    font-size: 24px;
+    position: absolute;
+    right: 16px;
   }
   > .menu {
     display: flex;

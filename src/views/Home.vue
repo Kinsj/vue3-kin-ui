@@ -5,8 +5,8 @@
     <h2>一套基于 Vue 3.0 + TypeScript 开发的</h2>
     <h2>UI 组件库</h2>
     <p class="actions">
-      <Button level="main"><router-link to="/doc">开始使用</router-link></Button>
-      <Button><a href="https://github.com"><svg class="icon">
+      <Button level="main"><router-link to="/doc/get-started">开始使用</router-link></Button>
+      <Button><a href="https://github.com/Kinsj/vue3-kin-ui" target="_blank"><svg class="icon">
         <use xlink:href="#i-github"></use>
       </svg> GitHub</a></Button>
     </p>

@@ -53,27 +53,32 @@ export default {
 $border-color: #d9d9d9;
 
 .demo {
-  border: 1px solid $border-color;
   margin: 16px 0 32px;
 
   >h2 {
-    font-size: 20px;
-    padding: 8px 16px;
-    border-bottom: 1px solid $border-color;
+    font-size: 16px;
+    padding: 20px 16px;
+    background: #e7f9f8;
+    color: #000;
+    font-weight: 600;
   }
 
   &-component {
     padding: 16px;
+    background: #f9f9f9;
   }
 
   &-actions {
     padding: 8px 16px;
+    background: #f9f9f9;
     border-top: 1px dashed $border-color;
   }
 
   &-code {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+    background: #f9f9f9;
+    overflow-x: auto;
 
     >pre {
       line-height: 1.1;
