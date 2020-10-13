@@ -19,9 +19,7 @@
 </template>
 
 <script lang="ts">
-import {
-  ref
-} from 'vue'
+import { ref } from 'vue'
 import {Dialog, Button} from 'vue3-kin-ui'
 
 export default {

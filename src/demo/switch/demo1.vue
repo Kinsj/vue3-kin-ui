@@ -6,9 +6,7 @@
 
 <script lang="ts">
 import {Switch} from 'vue3-kin-ui'
-import {
-  ref
-} from 'vue'
+import { ref } from 'vue'
 export default {
   components: {
     Switch,

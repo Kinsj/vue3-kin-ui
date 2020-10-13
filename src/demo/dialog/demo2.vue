@@ -7,9 +7,7 @@
 
 <script lang="ts">
 import {Button, openDialog} from 'vue3-kin-ui'
-import {
-  ref
-} from 'vue'
+import { ref } from 'vue'
 export default {
   components: {
     Button
