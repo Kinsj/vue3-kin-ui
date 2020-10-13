@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo"><router-link to="/"><img src="img/logo.png" alt=""></router-link></div>
+    <div class="logo"><router-link to="/"><img src="/img/logo.png" alt=""></router-link></div>
     <span class="toggleAside" :class="{'close': menuVisible}" @click="toggleMenu" >
       <svg class="icon">
         <use :xlink:href="`#i-${menuVisible ? 'close' : 'menu'}`"></use>

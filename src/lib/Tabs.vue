@@ -52,7 +52,7 @@ export default {
 
     tabPanes.forEach(tab => {
       // @ts-ignore
-      if (tab.name !== 'kin-ui-tab') {
+      if (tab.type.name !== 'kin-ui-tab') {
         throw new Error('Tabs 子标签必须是 Tab')
       }
     })

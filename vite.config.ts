@@ -19,5 +19,7 @@ export default {
         }`.trim()  // 导出成js对象
     }
   },
-  plugins: [md()]
+  plugins: [md()],
+  base: './',
+  assetsDir: 'assets',
 };

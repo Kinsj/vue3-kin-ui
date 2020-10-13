@@ -1,5 +1,5 @@
 <template>
-<div class="bg">
+<div class="bg" style="background-image: url(./img/bg.jpg)">
   <div class="text">
     <h1>Kin UI</h1>
     <h2>一套基于 Vue 3.0 + TypeScript 开发的</h2>
@@ -11,8 +11,8 @@
       </svg> GitHub</a></Button>
     </p>
   </div>
-  <img class="logo" src="img/logo.png" alt="">
-  <img class="footer" src="img/footer.png" alt="">
+  <img class="logo" src="/img/logo.png" alt="">
+  <img class="footer" src="/img/footer.png" alt="">
 </div>
 </template>
 
@@ -36,7 +36,7 @@ $color: #007974;
 }
 
 .bg {
-  background: url('/img/bg.jpg') 50% / cover no-repeat ;
+  background: 50% / cover no-repeat ;
   min-height: 100vh;
   overflow: hidden;
 
@@ -87,7 +87,7 @@ $color: #007974;
     margin-top: 10px;
   }
   @media (max-width: 800px) {
-    background: url('/img/bg.jpg') top / contain no-repeat ;
+    background: top / contain no-repeat ;
     .logo {
       height: 50px;
     }
