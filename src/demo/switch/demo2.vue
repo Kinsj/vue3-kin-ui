@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Switch from '../../lib/Switch.vue'
+import {Switch} from 'vue3-kin-ui'
 import {
   ref
 } from 'vue'

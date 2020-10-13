@@ -9,8 +9,7 @@
 </template>
 
 <script lang="ts">
-import Tabs from '../../lib/Tabs.vue'
-import Tab from '../../lib/Tab.vue'
+import {Tabs, Tab} from 'vue3-kin-ui'
 export default {
   components: {
     Tabs,

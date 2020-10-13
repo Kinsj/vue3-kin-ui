@@ -6,8 +6,7 @@
 </template>
 
 <script lang="ts">
-import Button from '../../lib/Button.vue'
-import openDialog from '../../lib/openDialog'
+import {Button, openDialog} from 'vue3-kin-ui'
 import {
   ref
 } from 'vue'

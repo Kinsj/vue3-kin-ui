@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import Button from "../../lib/Button.vue";
+import {Button} from "vue3-kin-ui";
 export default {
   components: {
     Button

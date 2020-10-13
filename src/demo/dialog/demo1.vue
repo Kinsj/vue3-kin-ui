@@ -22,8 +22,7 @@
 import {
   ref
 } from 'vue'
-import Dialog from '../../lib/Dialog.vue'
-import Button from '../../lib/Button.vue'
+import {Dialog, Button} from 'vue3-kin-ui'
 
 export default {
   components: {
