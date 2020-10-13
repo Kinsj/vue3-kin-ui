@@ -1,6 +1,6 @@
 {
   "name": "vue3-kin-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "files": [
     "dist/lib/*"
   ],
@@ -20,7 +20,7 @@
     "prismjs": "^1.22.0",
     "vue": "^3.0.0-rc.1",
     "vue-router": "4.0.0-beta.3",
-    "vue3-kin-ui": "0.0.2"
+    "vue3-kin-ui": "0.0.3"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",
