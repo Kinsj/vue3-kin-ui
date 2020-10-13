@@ -1,14 +1,16 @@
 {
   "name": "vue3-kin-ui",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "files": [
     "dist/lib/*"
   ],
   "main": "dist/lib/kin.js",
+  "module": "dist/lib/kin.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "bundle": "rollup -c"
   },
   "resolutions": {
     "node-sass": "npm:sass@^1.26.11"
@@ -18,7 +20,7 @@
     "prismjs": "^1.22.0",
     "vue": "^3.0.0-rc.1",
     "vue-router": "4.0.0-beta.3",
-    "vue3-kin-ui": "^0.0.0"
+    "vue3-kin-ui": "0.0.2"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",

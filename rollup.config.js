@@ -6,15 +6,23 @@ import { terser } from "rollup-plugin-terser"  // 混乱js代码
 
 export default {
   input: 'src/lib/index.ts', // 入口文件
-  output: {
-    globals: { // 配置全局依赖，不打包（默认使用我这个库的人都会引入vue）
-      vue: 'Vue'
+  output: [
+    {
+      globals: { // 配置全局依赖，不打包（默认使用我这个库的人都会引入vue）
+        vue: 'Vue'
+      },
+      name: 'Kin-ui', // 包名
+      file: 'dist/lib/kin.js', // 输出文件
+      format: 'umd',  // umd 模块规范
+      plugins: [terser()]  // 使用terser插件，是代码变乱
     },
-    name: 'Kin-ui', // 包名
-    file: 'dist/lib/kin.js', // 输出文件
-    format: 'umd',  // umd 模块规范
-    plugins: [terser()]  // 使用terser插件，是代码变乱
-  },
+    {
+      name: 'kin-ui', // 支持esm导出
+      file: 'dist/lib/kin.esm.js',
+      format: 'es',
+      plugins: [terser()]
+    }
+  ],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),  // scss 转js
     esbuild({
